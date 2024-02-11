@@ -1,4 +1,4 @@
-/**
+/** 
  * GrammarName es el nombre que tendrá la gramática
  * se debe remplazar en las importaciones
  */
@@ -15,8 +15,8 @@ export const analizar = (input) => {
   parser.buildParseTrees = true;
 
   //se debe poner el parser en la regla que inicie
-  const tree = parser.init(); //! el "".init" es donde empieza la gramatica, este cambiara dependiendo del proyecto
+  const tree = parser.read(); //! el "".init" es donde empieza la gramatica, este cambiara dependiendo del proyecto
   const customVisitor = new CustomVisitor();
 
-  return customVisitor.visitInit(tree);
+  return customVisitor.visitRead(tree);
 };
