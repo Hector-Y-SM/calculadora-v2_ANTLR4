@@ -4,8 +4,8 @@ import CommonLexerRules;
 read: stat+; //regla de inicio
 
 //stat sera la segunda regla de inicio
-stat: expr NEWLINE              # printExpr
-    | ID '=' expr NEWLINE       # assign
+stat: expr                      # printExpr
+    | ID '=' expr               # assign
     | NEWLINE                   # blank
     ;
 
